@@ -24,17 +24,26 @@ Dazu gibt es zwei PDFs zum Ausdrucken und Weitergeben:
 
 ## Installation
 
-**Claude.ai / Claude Desktop**
-1. Beide ZIP-Dateien aus [`dist/`](dist/) herunterladen (nicht entpacken).
-2. In Claude unter *Einstellungen → Capabilities* „Code execution and file creation“ einschalten und bei *Skills* über „Upload skill“ beide ZIPs hochladen.
-3. Gmail unter *Connectors* verbinden.
+**Claude Desktop (empfohlen): als Plugin per Link**
+1. In der Seitenleiste *Customize → Plugins* öffnen.
+2. *Add marketplace* wählen und `JonasGrunau/therapieplatz-skills` eintragen.
+3. Beim Plugin **therapieplatz-skills** auf *Install* klicken.
+4. Gmail unter *Connectors* verbinden.
 
-Skills gibt es in den Plänen Pro, Max, Team und Enterprise. Eine verständliche Schritt-für-Schritt-Anleitung steht in [`docs/Anleitung-Praxis-Suche-mit-Claude.pdf`](docs/Anleitung-Praxis-Suche-mit-Claude.pdf).
+Installierte Plugins gehören zu deinem Konto, die Skills stehen damit auch im normalen Chat zur Verfügung. Skills gibt es in den Plänen Pro, Max, Team und Enterprise. Eine verständliche Schritt-für-Schritt-Anleitung steht in [`docs/Anleitung-Praxis-Suche-mit-Claude.pdf`](docs/Anleitung-Praxis-Suche-mit-Claude.pdf).
+
+**Alternative: ZIP-Upload**
+1. Beide ZIP-Dateien aus [`dist/`](dist/) herunterladen (nicht entpacken).
+2. Unter *Einstellungen → Capabilities* „Code execution and file creation“ einschalten und bei *Skills* über „Upload skill“ beide ZIPs hochladen.
 
 **Claude Code**
-```bash
-git clone https://github.com/JonasGrunau/therapieplatz-skills.git
-cp -r therapieplatz-skills/skills/* ~/.claude/skills/
+```
+/plugin install therapieplatz-skills --marketplace JonasGrunau/therapieplatz-skills
+```
+Bei älteren Versionen von Claude Code:
+```
+/plugin marketplace add JonasGrunau/therapieplatz-skills
+/plugin install therapieplatz-skills@therapieplatz-skills
 ```
 
 **Als Projektordner (empfohlen)**

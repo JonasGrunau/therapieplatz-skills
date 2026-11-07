@@ -1,0 +1,10 @@
+{
+  "name": "therapieplatz-skills",
+  "description": "Hilft bei der Suche nach einem Psychotherapieplatz oder Psychiater-Termin: Praxen finden, individuelle Anfrage-Mails als Gmail-Entwürfe, Rückmeldungen auswerten und Kostenerstattung nach § 13 Abs. 3 SGB V vorbereiten.",
+  "version": "1.0.0",
+  "author": { "name": "Jonas Grunau", "url": "https://github.com/JonasGrunau" },
+  "license": "MIT",
+  "homepage": "https://github.com/JonasGrunau/therapieplatz-skills",
+  "repository": "https://github.com/JonasGrunau/therapieplatz-skills",
+  "keywords": ["psychotherapie", "psychiater", "therapieplatz", "adhs", "kostenerstattung", "gesundheit", "deutsch"]
+}
