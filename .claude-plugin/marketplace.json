@@ -1,13 +1,16 @@
 {
   "name": "therapieplatz-skills",
-  "owner": { "name": "Jonas Grunau", "url": "https://github.com/JonasGrunau" },
+  "owner": {
+    "name": "Jonas Grunau",
+    "url": "https://github.com/JonasGrunau"
+  },
   "metadata": {
     "description": "Skills für die Suche nach Psychotherapie- oder Psychiater-Terminen in Deutschland."
   },
   "plugins": [
     {
       "name": "therapieplatz-skills",
-      "source": ".",
+      "source": "./plugins/therapieplatz-skills",
       "description": "Praxen finden, Anfrage-Mails erstellen, Rückmeldungen auswerten und Kostenerstattung nach § 13 Abs. 3 SGB V vorbereiten."
     }
   ]

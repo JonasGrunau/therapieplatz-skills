@@ -5,8 +5,8 @@ Dieser Ordner unterstützt die Suche nach einem ambulanten **Psychotherapieplatz
 **Wenn eine Anfrage zu einem der Skills passt, lies zuerst die jeweilige `SKILL.md` und folge ihr.**
 
 ## Skills
-1. `skills/therapieplatz-suche/SKILL.md`: Praxen finden (Psychotherapie oder Psychiatrie) und Anfrage-Mails erstellen. Erzeugt `THERAPEUTEN.md` bzw. `PSYCHIATER.md`.
-2. `skills/rueckmeldungen-erfassen/SKILL.md`: Antworten auswerten und Nachweisliste führen. Erzeugt `RÜCKMELDUNGEN*.md` und `KRANKENKASSE.md`, nach Rückfrage auch den Antrag nach § 13 Abs. 3 SGB V bzw. einen Widerspruch.
+1. `plugins/therapieplatz-skills/skills/therapieplatz-suche/SKILL.md`: Praxen finden (Psychotherapie oder Psychiatrie) und Anfrage-Mails erstellen. Erzeugt `THERAPEUTEN.md` bzw. `PSYCHIATER.md`.
+2. `plugins/therapieplatz-skills/skills/rueckmeldungen-erfassen/SKILL.md`: Antworten auswerten und Nachweisliste führen. Erzeugt `RÜCKMELDUNGEN*.md` und `KRANKENKASSE.md`, nach Rückfrage auch den Antrag nach § 13 Abs. 3 SGB V bzw. einen Widerspruch.
 
 ## Typische Reihenfolge
 1. `therapieplatz-suche`: Liste und Anfrage-Mails
