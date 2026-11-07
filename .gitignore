@@ -1,0 +1,10 @@
+# Persönliche Arbeitsdateien – enthalten Gesundheits- und Kontaktdaten, niemals committen
+THERAPEUTEN.md
+PSYCHIATER.md
+RÜCKMELDUNGEN*.md
+RUECKMELDUNGEN*.md
+KRANKENKASSE.md
+E-MAIL-*.md
+EMAIL-ENTWUERFE.md
+*.private.md
+.DS_Store

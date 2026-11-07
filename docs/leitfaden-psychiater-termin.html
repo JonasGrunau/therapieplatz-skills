@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Schneller zum Psychiater-Termin – Leitfaden</title>
+<!-- PDF-Erzeugung: in Chromium/Playwright als A4 mit Hintergrundgrafiken drucken. -->
+<style>
+  @page { size: A4; margin: 18mm 17mm 18mm 17mm; }
+  :root{
+    --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --accent:#2f6f6a; --accent-soft:#e8f2f0;
+    --warn:#a4552a; --warn-soft:#fbefe6; --note-soft:#f3f4f7;
+  }
+  *{box-sizing:border-box}
+  body{font-family:"Inter",sans-serif;color:var(--ink);font-size:10.2pt;line-height:1.5;margin:0}
+  h1{font-family:"Inter Display","Inter",sans-serif;font-size:23pt;line-height:1.15;margin:0 0 6px;font-weight:700;letter-spacing:-.01em}
+  h2{font-family:"Inter Display","Inter",sans-serif;font-size:13pt;margin:22px 0 8px;font-weight:650;color:var(--ink)}
+  p{margin:0 0 8px}
+  .eyebrow{font-size:8.5pt;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .lead{font-size:11pt;color:var(--muted);margin-bottom:14px;max-width:150mm}
+  .hero{border-bottom:2px solid var(--accent);padding-bottom:12px;margin-bottom:6px}
+  .meta{font-size:8.5pt;color:var(--muted);margin-top:6px}
+  .tldr{background:var(--accent-soft);border-radius:8px;padding:11px 14px;margin:14px 0 4px}
+  .tldr strong{color:var(--accent)}
+  .flow{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;margin-top:6px;font-size:9pt}
+  .flow span.s{background:#fff;border:1px solid #c9ddd9;border-radius:20px;padding:2px 9px;white-space:nowrap}
+  .flow span.a{color:var(--accent)}
+  .step{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+  .step:last-child{border-bottom:none}
+  .num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:11pt;margin-top:1px}
+  .step h3{margin:0 0 3px;font-size:11pt;font-weight:650}
+  .step .when{font-size:8.5pt;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+  .step ul{margin:4px 0 0;padding-left:16px}
+  .step li{margin:2px 0}
+  .box{border-radius:8px;padding:11px 14px;margin:12px 0;break-inside:avoid}
+  .box.warn{background:var(--warn-soft);border-left:4px solid var(--warn)}
+  .box.warn h4{color:var(--warn)}
+  .box.note{background:var(--note-soft)}
+  .box h4{margin:0 0 5px;font-size:10.5pt}
+  .box ul{margin:0;padding-left:16px}
+  .box li{margin:2px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  table{width:100%;border-collapse:collapse;font-size:9.4pt;margin-top:4px}
+  th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:8.5pt;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+  td.n{white-space:nowrap;font-weight:600}
+  .check li{list-style:none;position:relative;padding-left:4px}
+  .check{padding-left:14px!important}
+  .check li::before{content:"☐";position:absolute;left:-14px;color:var(--accent)}
+  .foot{font-size:8.3pt;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;margin-top:18px}
+  em.k{font-style:normal;background:#fff3c4;padding:0 2px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">Leitfaden für gesetzlich Versicherte</div>
+  <h1>Schneller zum Psychiater-Termin</h1>
+  <div class="lead">So kommen Erwachsene mit ADHS (oder einer anderen psychischen Erkrankung) zu einer fachärztlich-psychiatrischen Behandlung, zum Beispiel zur medikamentösen Einstellung, wenn überall „keine Neupatienten“ steht.</div>
+  <div class="meta">Stand: November 2026 · Kein Ersatz für Rechts- oder ärztliche Beratung</div>
+</div>
+
+<div class="tldr">
+  <strong>Kurz gesagt:</strong> Mit einem Dringlichkeits-Code muss dir die Terminservicestelle (116117) einen Facharzttermin innerhalb von 4 Wochen vermitteln. Klappt das nicht, steht dir ein ambulanter Termin im Krankenhaus zu. Erst wenn auch das nicht zur Behandlung führt, hast du gute Chancen, dass die Krankenkasse eine Privatbehandlung bezahlt (§ 13 Abs. 3 SGB V).
+  <div class="flow">
+    <span class="s">Hausarzt</span><span class="a">→</span>
+    <span class="s">Eigene Suche</span><span class="a">→</span>
+    <span class="s">116117</span><span class="a">→</span>
+    <span class="s">Krankenhaus</span><span class="a">→</span>
+    <span class="s">Privatpraxis finden</span><span class="a">→</span>
+    <span class="s">Antrag</span><span class="a">→</span>
+    <span class="s">Widerspruch</span><span class="a">→</span>
+    <span class="s">Sozialgericht</span>
+  </div>
+</div>
+
+<h2>Schritt für Schritt</h2>
+
+<div class="step"><div class="num">1</div><div>
+  <div class="when">Woche 1</div>
+  <h3>Zur Hausarztpraxis</h3>
+  <ul>
+    <li>Überweisung zum Psychiater <em class="k">mit Dringlichkeits-Code</em> holen. Ohne Code vermittelt die 116117 keinen Facharzttermin innerhalb der 4-Wochen-Frist.</li>
+    <li>Nach dem <strong>Hausarzt-Vermittlungsfall</strong> fragen: Die Praxis kann selbst einen Facharzttermin für dich vereinbaren und bekommt dafür eine Vergütung.</li>
+    <li>Eine kurze <strong>Bescheinigung zur Dringlichkeit</strong> erbitten, zum Beispiel wegen starker Einschränkungen im Alltag, Rückfallrisiko oder Arbeitsfähigkeit.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">2</div><div>
+  <div class="when">Ab Woche 1, parallel</div>
+  <h3>Selbst suchen und Absagen dokumentieren</h3>
+  <ul>
+    <li>Kassenpraxen für Psychiatrie oder Nervenheilkunde in zumutbarer Entfernung per E-Mail und Telefon anfragen. Die Arztsuche der 116117, Verzeichnisse und Praxis-Websites helfen beim Finden.</li>
+    <li>Die Mails leicht unterschiedlich formulieren und gestaffelt senden, damit sie nicht im Spam landen.</li>
+    <li>Für jeden Kontakt notieren: <strong>Datum · Praxis · Adresse · Art des Kontakts · Absagegrund</strong>. Absage-Mails aufheben.</li>
+    <li>Eine feste Mindestzahl gibt es nicht. Wichtiger ist, dass die Praxen erreichbar und die Anfragen sauber dokumentiert sind.</li>
+    <li>Oft kommt die Zusage genau hier, zum Beispiel über Praxen mit Spezialschwerpunkt.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">3</div><div>
+  <div class="when">Woche 1–2</div>
+  <h3>Terminservicestelle 116117 anrufen</h3>
+  <ul>
+    <li>Telefon <strong>116117</strong> oder online über 116117.de, mit dem Dringlichkeits-Code von der Überweisung.</li>
+    <li>Die Servicestelle muss innerhalb einer Woche einen Termin vermitteln, der <strong>höchstens 4 Wochen</strong> in der Zukunft liegt. Bei Bedarf auch einen größeren Umkreis nennen und mehrmals anfragen.</li>
+    <li>Datum, Uhrzeit und Ergebnis jedes Anrufs notieren.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">4</div><div>
+  <div class="when">Wenn kein Termin in 4 Wochen</div>
+  <h3>Ambulanten Termin im Krankenhaus verlangen und hingehen</h3>
+  <ul>
+    <li>Kann die 116117 keinen Praxistermin anbieten, muss sie einen ambulanten Termin im Krankenhaus vermitteln.</li>
+    <li><strong>Den Termin wahrnehmen.</strong> Wer ein Angebot ablehnt, schwächt einen späteren Antrag erheblich.</li>
+    <li>Dort konkret fragen: <em>Übernehmen Sie die medikamentöse Einstellung und die Folgerezepte? Wenn nicht, wer dann?</em></li>
+    <li>Die Antwort <strong>schriftlich festhalten lassen</strong>, zum Beispiel im Arztbrief. Sonst selbst notieren: Datum, Arzt, Aussage.</li>
+    <li>Eine Alternative mit mehreren Terminen sind die <strong>Psychiatrischen Institutsambulanzen (PIA)</strong>, teils mit eigener ADHS-Sprechstunde. Dafür ist oft eine fachärztliche Überweisung nötig.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">5</div><div>
+  <div class="when">Bevor eine Privatbehandlung beginnt</div>
+  <h3>Privatpraxis finden und Kostenvoranschlag holen</h3>
+  <ul>
+    <li>Eine Privatpraxis oder einen Selbstzahler-Termin suchen, der zeitnah frei ist.</li>
+    <li>Einen schriftlichen <strong>Kostenvoranschlag</strong> erbitten, abgerechnet nach der Gebührenordnung für Ärzte (GOÄ).</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">6</div><div>
+  <div class="when">Vor dem ersten Privattermin</div>
+  <h3>Antrag auf Kostenerstattung nach § 13 Abs. 3 SGB V</h3>
+  <ul>
+    <li>Schriftlich an die Krankenkasse, Stichwort <strong>„Systemversagen“</strong>. Antrag stellen und die Entscheidung abwarten, <strong>bevor</strong> die Privatbehandlung beginnt.</li>
+    <li>Ausdrücklich begründen, warum die Behandlung dringend ist (medizinische oder soziale Gründe), und nicht nur mit „Termin-Schwierigkeiten“.</li>
+    <li>Beilagen: siehe Checkliste unten.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">7</div><div>
+  <div class="when">Frist: 1 Monat nach Erhalt des Bescheids</div>
+  <h3>Bei Ablehnung Widerspruch einlegen</h3>
+  <ul>
+    <li>Schriftlich bei der Krankenkasse, nicht „Einspruch“. Ein kurzer Satz genügt, um die Frist zu wahren: <em>„Hiermit lege ich Widerspruch gegen Ihren Bescheid vom … ein. Die Begründung reiche ich nach.“</em></li>
+    <li>Die Begründung nachreichen: Ergebnis der 116117, Krankenhaus-Notiz, Dringlichkeit. Und darauf hinweisen, falls die Kasse § 13 Abs. 3 gar nicht geprüft hat.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">8</div><div>
+  <div class="when">Frist: 1 Monat nach dem Widerspruchsbescheid</div>
+  <h3>Klage beim Sozialgericht</h3>
+  <ul>
+    <li>Für Versicherte fallen <strong>keine Gerichtskosten</strong> an. Ein eigener Anwalt kostet aber Geld.</li>
+    <li>Unterstützung gibt es bei Sozialverbänden wie dem VdK oder SoVD und bei der Unabhängigen Patientenberatung (UPD).</li>
+    <li>Bei echter Dringlichkeit ist zusätzlich ein <strong>Eilantrag</strong> (einstweilige Anordnung) möglich.</li>
+  </ul>
+</div></div>
+
+<div class="grid2">
+  <div class="box note">
+    <h4>Checkliste für den Antrag</h4>
+    <ul class="check">
+      <li>Diagnosebefund oder Arztbrief</li>
+      <li>Überweisung mit Dringlichkeits-Code (Kopie)</li>
+      <li>Ergebnis der 116117 (Daten, Anrufe)</li>
+      <li>Arztbrief oder Notiz vom Krankenhaustermin</li>
+      <li>Absagenliste (Datum, Praxis, Grund) und Absage-Mails</li>
+      <li>Bescheinigung zur Dringlichkeit (Hausarzt oder Psychotherapeut)</li>
+      <li>Kostenvoranschlag der Privatpraxis</li>
+      <li>Versichertennummer, Kontaktdaten</li>
+    </ul>
+  </div>
+  <div class="box warn">
+    <h4>Häufige Fehler</h4>
+    <ul>
+      <li>Privatbehandlung beginnen, <strong>bevor</strong> der Antrag gestellt ist</li>
+      <li>Die 116117 überspringen</li>
+      <li>Den angebotenen Krankenhaustermin ablehnen</li>
+      <li>Nur „Termin-Schwierigkeiten“ als Grund nennen</li>
+      <li>Die Widerspruchsfrist (1 Monat) verpassen</li>
+      <li>Absage-Mails löschen, bevor das Verfahren abgeschlossen ist</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Gut zu wissen</h2>
+<table>
+  <tr><th style="width:34%">Thema</th><th>Was gilt</th></tr>
+  <tr><td class="n">Kassenpatient mit Zusage</td><td>Die Arzttermine bezahlt die Kasse. Für zugelassene Medikamente zahlst du nur die normale Zuzahlung (meist 5–10 € pro Packung).</td></tr>
+  <tr><td class="n">Selbstzahler (Orientierung)</td><td>Erstgespräch meist ca. 100–180 €, Folgetermine ca. 50–160 €. Die Einstellungsphase kostet oft einige hundert Euro, dazu das Medikament auf Privatrezept.</td></tr>
+  <tr><td class="n">Einstellung = Prozess</td><td>Langsame Dosissteigerung über Wochen, Kontrollen von Blutdruck und Puls, regelmäßige Rezepte. Einmalige Termine ersetzen keine fortlaufende Betreuung.</td></tr>
+  <tr><td class="n">Hausarzt &amp; Folgerezepte</td><td>Die Ersteinstellung macht in der Regel ein Facharzt. Folgerezepte können danach teils Hausärzte ausstellen, das vorher abklären.</td></tr>
+  <tr><td class="n">Krise / Notfall</td><td>Ärztlicher Bereitschaftsdienst <strong>116117</strong> · Notruf <strong>112</strong> · In Bayern: Krisendienst Psychiatrie <strong>0800 655 3000</strong></td></tr>
+</table>
+
+<div class="foot">
+  Dieser Leitfaden fasst Erfahrungen und die allgemeine Rechtslage zusammen (u. a. § 13 Abs. 3 und § 75 Abs. 1a SGB V). Er ersetzt keine Rechts- oder ärztliche Beratung. Kassen und Gerichte entscheiden im Einzelfall unterschiedlich. Für eine verbindliche Einschätzung: Sozialverband (VdK, SoVD), Unabhängige Patientenberatung oder Fachanwalt für Sozialrecht. Welche Behandlung oder welches Medikament passt, entscheidet die behandelnde Ärztin oder der behandelnde Arzt.
+</div>
+
+</body>
+</html>
