@@ -25,16 +25,16 @@ Dazu gibt es zwei PDFs zum Ausdrucken und Weitergeben:
 ## Installation
 
 **Claude Desktop (empfohlen): als Plugin per Link**
-1. In der Seitenleiste *Customize → Plugins* öffnen.
-2. *Add marketplace* wählen und `JonasGrunau/therapieplatz-skills` eintragen.
-3. Beim Plugin **therapieplatz-skills** auf *Install* klicken.
-4. Gmail unter *Connectors* verbinden.
+1. In der Seitenleiste *Anpassungen → Plugins* öffnen (englische App: *Customize → Plugins*).
+2. *Marketplace hinzufügen* (*Add marketplace*) wählen und `JonasGrunau/therapieplatz-skills` eintragen.
+3. Beim Plugin **therapieplatz-skills** auf *Hinzufügen* bzw. *Installieren* klicken.
+4. Gmail unter *Anpassungen → Konnektoren* (*Connectors*) verbinden.
 
 Installierte Plugins gehören zu deinem Konto, die Skills stehen damit auch im normalen Chat zur Verfügung. Skills gibt es in den Plänen Pro, Max, Team und Enterprise. Eine verständliche Schritt-für-Schritt-Anleitung steht in [`docs/Anleitung-Praxis-Suche-mit-Claude.pdf`](docs/Anleitung-Praxis-Suche-mit-Claude.pdf).
 
 **Alternative: ZIP-Upload**
 1. Beide ZIP-Dateien aus [`dist/`](dist/) herunterladen (nicht entpacken).
-2. Unter *Einstellungen → Capabilities* „Code execution and file creation“ einschalten und bei *Skills* über „Upload skill“ beide ZIPs hochladen.
+2. Unter *Einstellungen → Funktionen* „Code-Ausführung und Dateierstellung“ einschalten, dann unter *Anpassungen → Fähigkeiten* über *+ → Fähigkeit hochladen* beide ZIPs hochladen.
 
 **Claude Code**
 ```
