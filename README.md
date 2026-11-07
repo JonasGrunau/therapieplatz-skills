@@ -18,17 +18,22 @@ Zwei [Claude-Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skil
 - Erklärt den Weg über die **Terminservicestelle 116117**.
 - Erstellt **nach Rückfrage** einen Antrag auf Kostenerstattung nach **§ 13 Abs. 3 SGB V** („Systemversagen“) und bei Ablehnung einen Widerspruch.
 
-Dazu gibt es einen einseitigen Leitfaden zum Ausdrucken und Weitergeben: [`docs/Leitfaden-Psychiater-Termin.pdf`](docs/Leitfaden-Psychiater-Termin.pdf).
+Dazu gibt es zwei PDFs zum Ausdrucken und Weitergeben:
+- [`docs/Leitfaden-Psychiater-Termin.pdf`](docs/Leitfaden-Psychiater-Termin.pdf): Schritt für Schritt zum Psychiater-Termin, von der 116117 über den Antrag bis zum Widerspruch.
+- [`docs/Anleitung-Praxis-Suche-mit-Claude.pdf`](docs/Anleitung-Praxis-Suche-mit-Claude.pdf): Wie man die Skills mit **Claude Desktop und Gmail** nutzt, verständlich auch ohne Technikwissen.
 
 ## Installation
 
 **Claude.ai / Claude Desktop**
-1. Die passende `.skill`-Datei aus [`dist/`](dist/) herunterladen.
-2. In Claude unter *Einstellungen → Capabilities → Skills* hochladen.
+1. Beide ZIP-Dateien aus [`dist/`](dist/) herunterladen (nicht entpacken).
+2. In Claude unter *Einstellungen → Capabilities* „Code execution and file creation“ einschalten und bei *Skills* über „Upload skill“ beide ZIPs hochladen.
+3. Gmail unter *Connectors* verbinden.
+
+Skills gibt es in den Plänen Pro, Max, Team und Enterprise. Eine verständliche Schritt-für-Schritt-Anleitung steht in [`docs/Anleitung-Praxis-Suche-mit-Claude.pdf`](docs/Anleitung-Praxis-Suche-mit-Claude.pdf).
 
 **Claude Code**
 ```bash
-# Repo klonen (URL oben über "Code" kopieren), dann:
+git clone https://github.com/JonasGrunau/therapieplatz-skills.git
 cp -r therapieplatz-skills/skills/* ~/.claude/skills/
 ```
 

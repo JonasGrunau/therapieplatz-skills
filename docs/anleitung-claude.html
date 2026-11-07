@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Therapieplatz-Suche mit Claude – Anleitung</title>
+<!-- PDF-Erzeugung: in Chromium/Playwright als A4 mit Hintergrundgrafiken drucken. -->
+<style>
+  @page { size: A4; margin: 18mm 17mm 18mm 17mm; }
+  :root{
+    --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --accent:#2f6f6a; --accent-soft:#e8f2f0;
+    --warn:#a4552a; --warn-soft:#fbefe6; --note-soft:#f3f4f7;
+  }
+  *{box-sizing:border-box}
+  body{font-family:"Inter",sans-serif;color:var(--ink);font-size:10.2pt;line-height:1.5;margin:0}
+  h1{font-family:"Inter Display","Inter",sans-serif;font-size:23pt;line-height:1.15;margin:0 0 6px;font-weight:700;letter-spacing:-.01em}
+  h2{font-family:"Inter Display","Inter",sans-serif;font-size:13pt;margin:20px 0 8px;font-weight:650}
+  p{margin:0 0 8px}
+  .eyebrow{font-size:8.5pt;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:600;margin-bottom:6px}
+  .lead{font-size:11pt;color:var(--muted);margin-bottom:12px;max-width:155mm}
+  .hero{border-bottom:2px solid var(--accent);padding-bottom:12px;margin-bottom:6px}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+  .badge{font-size:8.8pt;font-weight:600;border-radius:20px;padding:3px 10px;background:var(--accent);color:#fff}
+  .badge.o{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+  .tldr{background:var(--accent-soft);border-radius:8px;padding:11px 14px;margin:14px 0 4px}
+  .tldr strong{color:var(--accent)}
+  .step{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+  .step:last-child{border-bottom:none}
+  .num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:11pt;margin-top:1px}
+  .num.l{background:#fff;color:var(--accent);border:2px solid var(--accent)}
+  .step h3{margin:0 0 3px;font-size:11pt;font-weight:650}
+  .step ul{margin:4px 0 0;padding-left:16px}
+  .step li{margin:2px 0}
+  .say{display:block;background:var(--note-soft);border-left:3px solid var(--accent);border-radius:4px;padding:5px 9px;margin:5px 0 2px;font-style:italic}
+  .menu{font-weight:600;background:#fff3c4;padding:0 3px;border-radius:2px;font-style:normal}
+  .box{border-radius:8px;padding:11px 14px;margin:12px 0;break-inside:avoid}
+  .box.warn{background:var(--warn-soft);border-left:4px solid var(--warn)}
+  .box.warn h4{color:var(--warn)}
+  .box.note{background:var(--note-soft)}
+  .box h4{margin:0 0 5px;font-size:10.5pt}
+  .box ul{margin:0;padding-left:16px}
+  .box li{margin:2px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .foot{font-size:8.3pt;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;margin-top:16px}
+  a{color:var(--accent);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">Anleitung · ohne Technikwissen</div>
+  <h1>Die Praxis-Suche von Claude erledigen lassen</h1>
+  <div class="lead">Claude sucht passende Psychotherapie- oder Psychiater-Praxen für dich und schreibt die Anfragen. Danach wertet Claude die Antworten aus und hilft beim Antrag an die Krankenkasse. Du prüfst, entscheidest und sendest.</div>
+  <div class="badges"><span class="badge">Für Claude Desktop</span><span class="badge">mit Gmail</span><span class="badge o">Einrichtung ca. 10 Minuten</span></div>
+</div>
+
+<div class="tldr">
+  <strong>Wichtig:</strong> Diese Anleitung ist für die <strong>Claude Desktop App</strong> zusammen mit einem <strong>Gmail-Konto</strong> gemacht. Mit anderen Mail-Anbietern kann Claude keine Entwürfe in dein Postfach legen. Wenn du kein Gmail hast, leg dir am einfachsten in 5 Minuten ein neues Konto an (siehe Schritt 2).
+</div>
+
+<h2>Das brauchst du</h2>
+<div class="grid2">
+  <div class="box note" style="margin:0">
+    <ul>
+      <li>Einen Computer (Mac oder Windows)</li>
+      <li>Die <strong>Claude Desktop App</strong>: <a>claude.ai/download</a></li>
+      <li>Ein <strong>bezahltes Claude-Abo</strong> (Pro oder Max). Im kostenlosen Plan gibt es keine Skills.</li>
+    </ul>
+  </div>
+  <div class="box note" style="margin:0">
+    <ul>
+      <li>Ein <strong>Gmail-Konto</strong></li>
+      <li>Die zwei Skill-Dateien <strong>therapieplatz-suche.zip</strong> und <strong>rueckmeldungen-erfassen.zip</strong> von <a>github.com/JonasGrunau/therapieplatz-skills</a>, Ordner <strong>dist</strong></li>
+    </ul>
+  </div>
+</div>
+
+<h2>Einmalig einrichten</h2>
+
+<div class="step"><div class="num">1</div><div>
+  <h3>Claude Desktop installieren und anmelden</h3>
+  Unter <a>claude.ai/download</a> die App laden, installieren und mit deinem Claude-Konto anmelden.
+</div></div>
+
+<div class="step"><div class="num">2</div><div>
+  <h3>Gmail-Konto bereithalten oder neu anlegen</h3>
+  <ul>
+    <li>Kein Gmail? Unter <a>accounts.google.com/signup</a> kostenlos anlegen, das dauert ca. 5 Minuten.</li>
+    <li><strong>Tipp:</strong> Ein eigenes Konto nur für die Praxis-Suche ist praktisch. Dann sieht Claude nur diese Mails, und alle Antworten der Praxen liegen an einem Ort.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">3</div><div>
+  <h3>Skills herunterladen</h3>
+  <a>github.com/JonasGrunau/therapieplatz-skills</a> öffnen, in den Ordner <strong>dist</strong> klicken, jede ZIP-Datei anklicken und rechts oben auf das <strong>Download-Symbol</strong> (Pfeil nach unten) klicken. <strong>Nicht entpacken</strong>, die Dateien so lassen, wie sie sind.
+</div></div>
+
+<div class="step"><div class="num">4</div><div>
+  <h3>Skills in Claude hochladen</h3>
+  <ul>
+    <li>In Claude <span class="menu">Einstellungen → Capabilities</span> öffnen (englisch „Settings“).</li>
+    <li><span class="menu">Code execution and file creation</span> einschalten.</li>
+    <li>Weiter unten bei <span class="menu">Skills</span> auf <span class="menu">Upload skill</span> klicken und nacheinander beide ZIP-Dateien hochladen.</li>
+    <li>Prüfen, dass beide Skills in der Liste <strong>eingeschaltet</strong> sind.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num">5</div><div>
+  <h3>Gmail mit Claude verbinden</h3>
+  <ul>
+    <li>In Claude <span class="menu">Connectors</span> öffnen (in den Einstellungen bzw. unter „Customize“).</li>
+    <li><strong>Gmail</strong> auswählen, auf <strong>Verbinden</strong> klicken, mit deinem Google-Konto anmelden und den Zugriff erlauben.</li>
+    <li>Im Chat kannst du über das <strong>+</strong> unter „Connectors“ sehen, ob Gmail eingeschaltet ist.</li>
+  </ul>
+</div></div>
+
+<h2>So geht's</h2>
+
+<div class="step"><div class="num l">A</div><div>
+  <h3>Suche starten</h3>
+  Neuen Chat öffnen und in eigenen Worten schreiben, zum Beispiel:
+  <span class="say">„Ich suche einen Psychiater für eine ADHS-Medikation. Ich bin gesetzlich versichert und wohne in [Adresse]. Höchstens 30 Minuten mit der Bahn.“</span>
+  <span class="say">„Ich suche einen Therapieplatz für Verhaltenstherapie in der Nähe von [PLZ].“</span>
+  Claude fragt dann das Nötige ab, meist per Klick: Psychotherapie oder Psychiater, Adresse, Versicherung, Fahrzeit, Anzahl der Praxen. Die Suche dauert oft 10–30 Minuten. Du kannst währenddessen etwas anderes machen.
+</div></div>
+
+<div class="step"><div class="num l">B</div><div>
+  <h3>Muster-Mail prüfen</h3>
+  Claude zeigt dir eine Beispiel-Mail. Wenn sie passt, schreib „passt“, sonst sag, was anders sein soll. Wenn du magst, gib deine <strong>Telefonnummer</strong> an, denn viele Praxen rufen lieber zurück.
+</div></div>
+
+<div class="step"><div class="num l">C</div><div>
+  <h3>In Gmail senden</h3>
+  <ul>
+    <li>Claude legt die Anfragen als <strong>Entwürfe</strong> in dein Gmail. Jede Mail ist etwas anders formuliert, damit sie nicht im Spam landet.</li>
+    <li>Gmail öffnen, links auf <span class="menu">Entwürfe</span> klicken, kurz lesen und <strong>selbst senden</strong>.</li>
+    <li>Am besten <strong>verteilt</strong> senden, also ein paar pro Stunde oder über 1–2 Tage.</li>
+  </ul>
+</div></div>
+
+<div class="step"><div class="num l">D</div><div>
+  <h3>Antworten auswerten lassen</h3>
+  Nach 2–3 Tagen schreiben:
+  <span class="say">„Scanne mein Postfach nach Rückmeldungen der Praxen.“</span>
+  Claude sortiert die Antworten in Zusagen, Absagen und Praxen, bei denen du anrufen sollst, und macht dir einen <strong>Anrufplan</strong> mit den besten Zeiten. Telefonische Ergebnisse kannst du Claude einfach erzählen.
+</div></div>
+
+<div class="step"><div class="num l">E</div><div>
+  <h3>Keine Zusage? Antrag vorbereiten</h3>
+  Erst den Weg über die <strong>116117</strong> gehen (siehe Leitfaden „Schneller zum Psychiater-Termin“), dann:
+  <span class="say">„Erstelle mir den Antrag auf Kostenerstattung für meine Krankenkasse.“</span>
+  Claude erstellt den Antrag mit allen Absagen als Entwurf, du ergänzt Versichertennummer und Geburtsdatum. Bei einer Ablehnung hilft Claude auch beim Widerspruch.
+</div></div>
+
+<div class="grid2">
+  <div class="box note">
+    <h4>Gut zu wissen</h4>
+    <ul>
+      <li>Claude <strong>sendet und löscht nichts</strong> ohne deine Zustimmung.</li>
+      <li>Claude erfindet keine Praxen oder Adressen. Wenn wenig gefunden wird, sagt Claude das ehrlich und bietet einen größeren Umkreis an.</li>
+      <li>Hängt etwas, schreib einfach „mach weiter“.</li>
+      <li>Deine Listen kannst du als Datei herunterladen.</li>
+    </ul>
+  </div>
+  <div class="box warn">
+    <h4>Bitte beachten</h4>
+    <ul>
+      <li>Du teilst Gesundheitsdaten mit einem KI-Dienst. Gib nur an, was für die Anfrage nötig ist.</li>
+      <li>Absage-Mails <strong>nicht löschen</strong>, solange ein Antrag läuft. Sie sind dein Nachweis.</li>
+      <li>Keine Rechts- oder ärztliche Beratung.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="foot">
+  <strong>In einer Krise:</strong> Ärztlicher Bereitschaftsdienst 116117 · Notruf 112 · Telefonseelsorge 0800 111 0 111 · Bayern: Krisendienst Psychiatrie 0800 655 3000.<br>
+  Menünamen können sich mit App-Updates leicht ändern. Hilfe von Anthropic: support.claude.com („Skills“ und „Google Workspace connectors“).
+</div>
+
+</body>
+</html>
