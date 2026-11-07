@@ -11,9 +11,9 @@
     --warn:#a4552a; --warn-soft:#fbefe6; --note-soft:#f3f4f7;
   }
   *{box-sizing:border-box}
-  body{font-family:"Inter",sans-serif;color:var(--ink);font-size:10.2pt;line-height:1.5;margin:0}
+  body{font-family:"Inter",sans-serif;color:var(--ink);font-size:10pt;line-height:1.45;margin:0}
   h1{font-family:"Inter Display","Inter",sans-serif;font-size:23pt;line-height:1.15;margin:0 0 6px;font-weight:700;letter-spacing:-.01em}
-  h2{font-family:"Inter Display","Inter",sans-serif;font-size:13pt;margin:22px 0 8px;font-weight:650;color:var(--ink)}
+  h2{font-family:"Inter Display","Inter",sans-serif;font-size:13pt;margin:16px 0 6px;font-weight:650;color:var(--ink)}
   p{margin:0 0 8px}
   .eyebrow{font-size:8.5pt;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:600;margin-bottom:6px}
   .lead{font-size:11pt;color:var(--muted);margin-bottom:14px;max-width:150mm}
@@ -24,14 +24,14 @@
   .flow{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;margin-top:6px;font-size:9pt}
   .flow span.s{background:#fff;border:1px solid #c9ddd9;border-radius:20px;padding:2px 9px;white-space:nowrap}
   .flow span.a{color:var(--accent)}
-  .step{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+  .step{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);break-inside:avoid}
   .step:last-child{border-bottom:none}
   .num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:11pt;margin-top:1px}
   .step h3{margin:0 0 3px;font-size:11pt;font-weight:650}
   .step .when{font-size:8.5pt;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
   .step ul{margin:4px 0 0;padding-left:16px}
   .step li{margin:2px 0}
-  .box{border-radius:8px;padding:11px 14px;margin:12px 0;break-inside:avoid}
+  .box{border-radius:8px;padding:10px 14px;margin:10px 0;break-inside:avoid}
   .box.warn{background:var(--warn-soft);border-left:4px solid var(--warn)}
   .box.warn h4{color:var(--warn)}
   .box.note{background:var(--note-soft)}
@@ -135,6 +135,7 @@
     <li>Schriftlich an die Krankenkasse, Stichwort <strong>„Systemversagen“</strong>. Antrag stellen und die Entscheidung abwarten, <strong>bevor</strong> die Privatbehandlung beginnt.</li>
     <li>Ausdrücklich begründen, warum die Behandlung dringend ist (medizinische oder soziale Gründe), und nicht nur mit „Termin-Schwierigkeiten“.</li>
     <li>Beilagen: siehe Checkliste unten.</li>
+    <li class="hl">💡 <strong>Den Antrag kann Claude für dich schreiben</strong>, mit allen Absagen, fertig als Entwurf in deinem Gmail. Siehe die Anleitung <strong>„Die Praxis-Suche von Claude erledigen lassen“</strong>, Schritt E.</li>
   </ul>
 </div></div>
 
@@ -142,8 +143,8 @@
   <div class="when">Frist: 1 Monat nach Erhalt des Bescheids</div>
   <h3>Bei Ablehnung Widerspruch einlegen</h3>
   <ul>
-    <li>Schriftlich bei der Krankenkasse, nicht „Einspruch“. Ein kurzer Satz genügt, um die Frist zu wahren: <em>„Hiermit lege ich Widerspruch gegen Ihren Bescheid vom … ein. Die Begründung reiche ich nach.“</em></li>
-    <li>Die Begründung nachreichen: Ergebnis der 116117, Krankenhaus-Notiz, Dringlichkeit. Und darauf hinweisen, falls die Kasse § 13 Abs. 3 gar nicht geprüft hat.</li>
+    <li>Schriftlich bei der Krankenkasse. Ein kurzer Satz genügt, um die Frist zu wahren: <em>„Hiermit lege ich Widerspruch gegen Ihren Bescheid vom … ein. Die Begründung reiche ich nach.“</em></li>
+    <li>Die Begründung nachreichen: Ergebnis der 116117, Krankenhaus-Notiz, Dringlichkeit.</li>
   </ul>
 </div></div>
 
